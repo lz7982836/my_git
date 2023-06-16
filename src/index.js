@@ -7,6 +7,8 @@ import '@/style/index.less';
 import '@/index.css';
 
 console.log(a);
+console.log(a);
+
 jQuery(() => {
   console.log(123);
 });

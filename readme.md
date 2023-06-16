@@ -22,10 +22,22 @@ git 有三种状态 你的文件可能处于其中之一：
 git config --global user.name "自定义"
 git config --global user.email "邮箱"
 
-\_查看配置信息
+\_查看配置信息 123456789
 git config --list
 
 # 获取 git 仓库（repo）
 
 - 自动初始化 git 仓库 git init
 - 克隆远程(服务器)仓库 git clone [repo_url]
+
+U （Untracked）未跟踪（新增）
+A （added）跟踪
+M （modified） 跟踪之后被修改
+
+# 创建快照（备份）
+
+git add . 将所有文件放到暂存区（经常做的）
+git commit -m '提交' 将暂存区文件提交到仓库（某一个功能完成的时候）
+
+[工作区]---git add. 【暂存区】 ---git commit -m 'xxx' 【repo】
+[工作区]---git commit -a -m 'xxx'【repo】(vim 编辑器操作)
