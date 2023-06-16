@@ -23,3 +23,5 @@ jQuery.ajax({
 
 console.log(_);
 console.log(process.env.NODE_ENV);
+
+console.log('测试gitee->github同步功能');
