@@ -85,6 +85,7 @@ module.exports = {
         pathRewrite: { '/api1': '' },
       },
     },
+    //报错不显示
     client: {
       overlay: true,
     },

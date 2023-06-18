@@ -1,26 +1,1021 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= htmlWebpackPlugin.options.title%>
-  </title>
+
+  <meta charset="utf-8" />
+
+  <title>海绵宝宝</title>
+
 </head>
 
-<body class=" bg-pink-400">
-  <!-- 加载js和css哪一个会阻塞页面的加载 -->
-  <!-- 页面加载的流程是怎么样的 -->
-  <!-- script标签defer async prefetch分别什么作用，什么时候使用 -->
-  <% htmlWebpackPlugin.options.cdn.script.forEach(function (item) {%>
-    <script src="<%=item%>"></script>
-    <%})%>
-      <div class="cot">hahah </div>
-      <div class="a w-28 h-28 bg-red-300 text-[40px] text-center">
-        test successful!
-      </div>
+<body>
+
+  <canvas id="canvas" width="1000" height="700" style="background: #01539f;"></canvas>
+
 </body>
+
+<script>
+
+  var canvas = document.getElementById("canvas");
+
+  var ctx = canvas.getContext("2d");
+
+  with (ctx) {
+
+    //袖子
+
+    //左
+
+    beginPath();
+
+    fillStyle = "#fff";
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    bezierCurveTo(142, 253, 112, 263, 112, 303)
+
+    quadraticCurveTo(120, 308, 150, 303)
+
+    fill();
+
+    stroke();
+
+    closePath();
+
+    //右
+
+    beginPath();
+
+    fillStyle = "#fff";
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    bezierCurveTo(445, 253, 477, 263, 477, 303)
+
+    quadraticCurveTo(467, 308, 447, 303)
+
+    fill();
+
+    stroke();
+
+    closePath();
+
+    //胳膊
+
+    //左
+
+    beginPath();
+
+    fillStyle = "#f5e261";
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    moveTo(122, 306);
+
+    lineTo(110, 406);
+
+    lineTo(120, 406);
+
+    lineTo(132, 306);
+
+    fill();
+
+    stroke();
+
+    closePath();
+
+    //右
+
+    beginPath();
+
+    fillStyle = "#f5e261";
+
+    strokeStyle = "#000";
+
+    moveTo(458, 306);
+
+    lineTo(470, 406);
+
+    lineTo(480, 406);
+
+    lineTo(468, 306);
+
+    fill();
+
+    stroke();
+
+    closePath();
+
+    //手
+
+    //左
+
+    //衣服
+
+    beginPath();
+
+    fillStyle = "#fff";
+
+    strokeStyle = "#000";
+
+    lineWidth = 5;
+
+    shadowColor = "#000";
+
+    shadowOffsetX = 0;
+
+    shadowOffsetY = 0;
+
+    shadowBlur = 0;
+
+    moveTo(145, 385);
+
+    lineTo(146, 425);
+
+    lineTo(442, 425);
+
+    lineTo(443, 385);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //裤子
+
+    beginPath();
+
+    fillStyle = "#ae6f28";
+
+    strokeStyle = "#000";
+
+    moveTo(146, 427);
+
+    lineTo(147, 470);
+
+    lineTo(441, 470);
+
+    lineTo(442, 427);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //裤子图案
+
+    beginPath();
+
+    fillStyle = "#000";
+
+    rect(156, 438, 60, 15);
+
+    rect(236, 438, 120, 15);
+
+    rect(373, 438, 60, 15);
+
+    fill();
+
+    closePath();
+
+    //裤腿
+
+    beginPath();
+
+    fillStyle = "#ae6f28";
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    moveTo(190, 472);
+
+    lineTo(190, 490);
+
+    lineTo(235, 490);
+
+    lineTo(235, 472);
+
+    moveTo(350, 472);
+
+    lineTo(350, 490);
+
+    lineTo(395, 490);
+
+    lineTo(395, 472);
+
+    fill();
+
+    stroke();
+
+    closePath();
+
+    //腿
+
+    beginPath();
+
+    fillStyle = "#fffe71";
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    moveTo(208, 491);
+
+    lineTo(208, 516);
+
+    lineTo(218, 516);
+
+    lineTo(218, 491);
+
+    moveTo(368, 491);
+
+    lineTo(368, 516);
+
+    lineTo(378, 516);
+
+    lineTo(378, 491);
+
+    fill();
+
+    stroke();
+
+    closePath();
+
+    //袜子
+
+    beginPath();
+
+    fillStyle = "#fff";
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    moveTo(208, 517);
+
+    lineTo(207, 560);
+
+    lineTo(218, 560);
+
+    lineTo(218, 517);
+
+    moveTo(368, 517);
+
+    lineTo(368, 560);
+
+    lineTo(379, 560);
+
+    lineTo(378, 517);
+
+    fill();
+
+    stroke();
+
+    closePath();
+
+    //蓝杠
+
+    beginPath();
+
+    strokeStyle = "#536d92";
+
+    lineWidth = 4;
+
+    moveTo(208, 523);
+
+    lineTo(218, 523);
+
+    moveTo(368, 523);
+
+    lineTo(378, 523);
+
+    stroke();
+
+    closePath();
+
+    //红杠
+
+    beginPath();
+
+    strokeStyle = "#da4751";
+
+    lineWidth = 4;
+
+    moveTo(209, 530);
+
+    lineTo(218, 530);
+
+    moveTo(369, 530);
+
+    lineTo(378, 530);
+
+    stroke();
+
+    closePath();
+
+
+
+    //领带
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    lineWidth = 5;
+
+    fillStyle = "#ef4641";
+
+    moveTo(270, 385);
+
+    lineTo(320, 385);
+
+    lineTo(298, 413);
+
+    lineTo(292, 413);
+
+    lineTo(270, 385);
+
+    moveTo(292, 415);
+
+    lineTo(280, 446);
+
+    lineTo(295, 462);
+
+    lineTo(310, 446);
+
+    lineTo(298, 415);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //领子
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    fillStyle = "#fff";
+
+    moveTo(280, 393);
+
+    lineTo(265, 410);
+
+    lineTo(218, 385);
+
+    moveTo(310, 393);
+
+    lineTo(325, 410);
+
+    lineTo(362, 385);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //脸
+
+    beginPath();
+
+    strokeStyle = "#818620";
+
+    fillStyle = "#f5e262";
+
+    lineWidth = 5;
+
+    bezierCurveTo(140, 50, 150, 60, 160, 50);
+
+    quadraticCurveTo(170, 40, 180, 50);
+
+    quadraticCurveTo(190, 60, 200, 50);
+
+    quadraticCurveTo(210, 40, 220, 50);
+
+    quadraticCurveTo(230, 60, 240, 50);
+
+    quadraticCurveTo(250, 40, 260, 50);
+
+    quadraticCurveTo(270, 60, 280, 50);
+
+    quadraticCurveTo(290, 40, 300, 50);
+
+    quadraticCurveTo(310, 60, 320, 50);
+
+    quadraticCurveTo(330, 40, 340, 50);
+
+    quadraticCurveTo(350, 60, 360, 50);
+
+    quadraticCurveTo(370, 40, 380, 50);
+
+    quadraticCurveTo(390, 60, 400, 50);
+
+    quadraticCurveTo(410, 40, 420, 50);
+
+    quadraticCurveTo(430, 60, 440, 50);
+
+    quadraticCurveTo(450, 40, 460, 50);
+
+    quadraticCurveTo(465, 60, 460, 70);
+
+    quadraticCurveTo(450, 80, 460, 90);
+
+    quadraticCurveTo(468, 100, 458, 110);
+
+    quadraticCurveTo(446, 120, 456, 130);
+
+    quadraticCurveTo(466, 140, 456, 150);
+
+    quadraticCurveTo(444, 160, 454, 170);
+
+    quadraticCurveTo(464, 180, 454, 190);
+
+    quadraticCurveTo(442, 200, 452, 210);
+
+    quadraticCurveTo(462, 220, 452, 230);
+
+    quadraticCurveTo(440, 240, 450, 250);
+
+    quadraticCurveTo(460, 260, 450, 270);
+
+    quadraticCurveTo(438, 280, 448, 290);
+
+    quadraticCurveTo(458, 300, 448, 310);
+
+    quadraticCurveTo(436, 320, 446, 330);
+
+    quadraticCurveTo(456, 340, 446, 350);
+
+    quadraticCurveTo(434, 360, 444, 370);
+
+    quadraticCurveTo(454, 380, 444, 390);
+
+    quadraticCurveTo(435, 405, 424, 390);
+
+    quadraticCurveTo(415, 380, 405, 390);
+
+    quadraticCurveTo(395, 400, 385, 390);
+
+    quadraticCurveTo(375, 380, 365, 390);
+
+    quadraticCurveTo(355, 400, 345, 390);
+
+    quadraticCurveTo(335, 380, 325, 390);
+
+    quadraticCurveTo(315, 400, 305, 390);
+
+    quadraticCurveTo(295, 380, 285, 390);
+
+    quadraticCurveTo(275, 400, 265, 390);
+
+    quadraticCurveTo(255, 380, 245, 390);
+
+    quadraticCurveTo(235, 400, 225, 390);
+
+    quadraticCurveTo(215, 380, 205, 390);
+
+    quadraticCurveTo(195, 400, 185, 390);
+
+    quadraticCurveTo(175, 380, 165, 390);
+
+    quadraticCurveTo(155, 400, 145, 390);
+
+    quadraticCurveTo(135, 380, 145, 370);
+
+    quadraticCurveTo(153, 360, 143, 350);
+
+    quadraticCurveTo(133, 340, 143, 330);
+
+    quadraticCurveTo(151, 320, 141, 310);
+
+    quadraticCurveTo(131, 300, 141, 290);
+
+    quadraticCurveTo(149, 280, 139, 270);
+
+    quadraticCurveTo(129, 260, 139, 250);
+
+    quadraticCurveTo(147, 240, 137, 230);
+
+    quadraticCurveTo(127, 220, 137, 210);
+
+    quadraticCurveTo(145, 200, 135, 190);
+
+    quadraticCurveTo(125, 180, 135, 170);
+
+    quadraticCurveTo(143, 160, 133, 150);
+
+    quadraticCurveTo(123, 140, 133, 130);
+
+    quadraticCurveTo(141, 120, 131, 110);
+
+    quadraticCurveTo(121, 100, 131, 90);
+
+    quadraticCurveTo(139, 80, 129, 70);
+
+    quadraticCurveTo(119, 60, 129, 50);
+
+    quadraticCurveTo(137, 45, 140, 50);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //眼睛
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    fillStyle = "#fff";
+
+    arc(249, 180, 45, 0, Math.PI * 2, true);
+
+    arc(341, 180, 45, 0, Math.PI * 2, true);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //眼仁
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    fillStyle = "#50d1f1";
+
+    arc(255, 180, 18, 0, Math.PI * 2, true);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    fillStyle = "#50d1f1";
+
+    arc(335, 180, 18, 0, Math.PI * 2, true);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //眼球
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    fillStyle = "#000";
+
+    arc(255, 180, 10, 0, Math.PI * 2, true);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    fillStyle = "#000";
+
+    arc(335, 180, 10, 0, Math.PI * 2, true);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //眼睫毛
+
+    beginPath();
+
+    lineWidth = 6;
+
+    strokeStyle = "#000";
+
+    moveTo(210, 122);
+
+    lineTo(223, 142);
+
+    moveTo(247, 112);
+
+    lineTo(247, 133);
+
+    moveTo(283, 117);
+
+    lineTo(270, 140);
+
+    moveTo(307, 120);
+
+    lineTo(320, 140);
+
+    moveTo(344, 112);
+
+    lineTo(344, 133);
+
+    moveTo(380, 120);
+
+    lineTo(365, 140);
+
+    stroke();
+
+    closePath();
+
+    //嘴角
+
+    beginPath();
+
+    fillStyle = "#fdd06b"
+
+    lineWidth = 3;
+
+    strokeStyle = "#ca5939";
+
+    moveTo(190, 230);
+
+    bezierCurveTo(160, 175, 265, 190, 230, 230);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    beginPath();
+
+    fillStyle = "#fdd06b"
+
+    lineWidth = 3;
+
+    strokeStyle = "#ca5939";
+
+    moveTo(350, 230);
+
+    bezierCurveTo(325, 175, 435, 190, 395, 230);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //牙
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    fillStyle = "#fff";
+
+    moveTo(275, 272);
+
+    lineTo(275, 292);
+
+    lineTo(295, 292);
+
+    lineTo(295, 272);
+
+    moveTo(300, 272);
+
+    lineTo(300, 292);
+
+    lineTo(320, 292);
+
+    lineTo(320, 271);
+
+    //rect(297,252,20,20);
+
+    fill();
+
+    stroke();
+
+    closePath();
+
+    //嘴
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    lineWidth = 3;
+
+    bezierCurveTo(210, 220, 290, 340, 380, 220);
+
+    stroke();
+
+    closePath();
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    bezierCurveTo(205, 225, 205, 215, 220, 220);
+
+    stroke();
+
+    closePath();
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    lineWidth = 2;
+
+    bezierCurveTo(370, 220, 380, 215, 385, 225);
+
+    stroke();
+
+    closePath();
+
+    //鼻子
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    lineWidth = 3;
+
+    fillStyle = "#f5e262";
+
+    moveTo(290, 215);
+
+    bezierCurveTo(265, 170, 340, 185, 300, 225);
+
+    stroke();
+
+    fill();
+
+    closePath();
+
+    //下巴
+
+    beginPath();
+
+    strokeStyle = "#cb662e";
+
+    lineWidth = 2;
+
+    bezierCurveTo(250, 305, 270, 330, 290, 310);
+
+    quadraticCurveTo(300, 305, 310, 310);
+
+    quadraticCurveTo(330, 330, 350, 305);
+
+    shadowColor = "#cb662e";
+
+    shadowOffsetX = 0;
+
+    shadowOffsetY = -3;
+
+    shadowBlur = 10;
+
+    stroke();
+
+    closePath();
+
+    //雀斑
+
+    beginPath();
+
+    fillStyle = "#bf7627";
+
+    arc(197, 205, 2, 0, Math.PI * 2, true);
+
+    fill();
+
+    closePath();
+
+    beginPath();
+
+    fillStyle = "#bf7627";
+
+    arc(210, 214, 2, 0, Math.PI * 2, true);
+
+    fill();
+
+    closePath();
+
+    beginPath();
+
+    fillStyle = "#bf7627";
+
+    arc(218, 207, 2, 0, Math.PI * 2, true);
+
+    fill();
+
+    closePath();
+
+    beginPath();
+
+    fillStyle = "#bf7627";
+
+    arc(367, 205, 2, 0, Math.PI * 2, true);
+
+    fill();
+
+    closePath();
+
+    beginPath();
+
+    fillStyle = "#bf7627";
+
+    arc(390, 206, 2, 0, Math.PI * 2, true);
+
+    fill();
+
+    closePath();
+
+    beginPath();
+
+    fillStyle = "#bf7627";
+
+    arc(380, 213, 2, 0, Math.PI * 2, true);
+
+    fill();
+
+    closePath();
+
+    //皮鞋
+
+    //左
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    fillStyle = "#000";
+
+    lineWidth = 4;
+
+    shadowColor = "#000";
+
+    shadowOffsetX = 0;
+
+    shadowOffsetY = 0;
+
+    shadowBlur = 0;
+
+    arc(180, 577, 11, 0, Math.PI * 2, true);
+
+    bezierCurveTo(185, 560, 197, 575, 207, 560);
+
+    moveTo(207, 560);
+
+    lineTo(217, 560);
+
+    quadraticCurveTo(227, 570, 217, 585);
+
+    quadraticCurveTo(197, 580, 180, 585);
+
+    quadraticCurveTo(207, 561, 185, 570);
+
+    rect(207, 585, 10, 4)
+
+    stroke();
+
+    fill();
+
+    //ctx.rotate( m * Math.PI / 180)
+
+    closePath();
+
+    //右
+
+    beginPath();
+
+    strokeStyle = "#000";
+
+    fillStyle = "#000";
+
+    lineWidth = 4;
+
+    shadowColor = "#000";
+
+    shadowOffsetX = 0;
+
+    shadowOffsetY = 0;
+
+    shadowBlur = 0;
+
+    arc(405, 577, 11, 0, Math.PI * 2, true);
+
+    bezierCurveTo(400, 560, 388, 575, 378, 560);
+
+    moveTo(378, 560);
+
+    lineTo(368, 560);
+
+    quadraticCurveTo(358, 570, 368, 585);
+
+    quadraticCurveTo(388, 580, 405, 585);
+
+    quadraticCurveTo(422, 561, 400, 570);
+
+    rect(368, 585, 10, 4)
+
+    stroke();
+
+    fill();
+
+    //ctx.rotate( m * Math.PI / 180)
+
+    closePath();
+
+    //白点
+
+    beginPath();
+
+    strokeStyle = "#f5e262";
+
+    fillStyle = "#c4b127";
+
+    fill();
+
+    EvenCompEllipse(ctx, 160, 100, 10, 15);
+
+    EvenCompEllipse(ctx, 150, 150, 5, 7);
+
+    EvenCompEllipse(ctx, 200, 320, 7, 10)
+
+    EvenCompEllipse(ctx, 225, 350, 11, 16)
+
+    EvenCompEllipse(ctx, 425, 120, 11, 16)
+
+    EvenCompEllipse(ctx, 410, 320, 9, 12)
+
+    EvenCompEllipse(ctx, 380, 340, 6, 9)
+
+    closePath();
+
+  }
+
+  function EvenCompEllipse(ctx, x, y, a, b) {
+
+    ctx.save();
+
+    //选择a、b中的较大者作为arc方法的半径参数
+
+    var r = (a > b) ? a : b;
+
+    var ratioX = a / r; //横轴缩放比率
+
+    var ratioY = b / r; //纵轴缩放比率
+
+    ctx.scale(ratioX, ratioY); //进行缩放（均匀压缩）
+
+    ctx.beginPath();
+
+    //从椭圆的左端点开始逆时针绘制
+
+    ctx.moveTo((x + a) / ratioX, y / ratioY);
+
+    ctx.arc(x / ratioX, y / ratioY, r, 0, 2 * Math.PI);
+
+    ctx.closePath();
+
+    ctx.stroke();
+
+    ctx.fill();
+
+    ctx.restore();
+
+  };
+
+
+
+</script>
 
 </html>
